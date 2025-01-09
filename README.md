@@ -29,6 +29,13 @@ A production-ready Elixir server implementation providing real-time features thr
 - Test coverage
 - Monitoring setup
 
+📊 **Comprehensive Monitoring**
+
+- Multi-backend logging system
+- Metrics collection
+- Telemetry integration
+- Pluggable monitoring solutions
+
 ## Quick Start
 
 ### Prerequisites
@@ -85,6 +92,7 @@ Detailed documentation is available in the [docs](./docs) directory:
 - [Architecture Overview](docs/architecture.md)
 - [Real-time Features](docs/realtime.md)
 - [Firebase Integration](docs/firebase_integration.md)
+- [Observability Guide](docs/observability.md)
 - [API Reference](docs/api/README.md)
 - [Deployment Guide](docs/deployment.md)
 

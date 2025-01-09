@@ -13,4 +13,20 @@ config :realtime_server, RealtimeServer.Repo,
   database: "realtime_server",
   username: System.get_env("DATABASE_USERNAME"),
   password: System.get_env("DATABASE_PASSWORD"),
-  hostname: System.get_env("DATABASE_HOST") 
+  hostname: System.get_env("DATABASE_HOST")
+
+config :realtime_server,
+  logger_backends: [
+    RealtimeServer.Observability.Loggers.Console
+  ],
+  metrics_backends: [
+    RealtimeServer.Observability.Metrics.Prometheus
+  ]
+
+# Telemetry configuration
+config :telemetry_metrics,
+  reporter_options: [
+    host: "localhost",
+    port: 9568,
+    protocol: :http
+  ]
