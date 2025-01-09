@@ -1,0 +1,47 @@
+# Elixir
+/_build/
+/cover/
+/deps/
+/doc/
+/.fetch
+erl_crash.dump
+*.ez
+realtime_server-*.tar
+/priv/static/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Temporary files
+/tmp/
+
+# Database
+/priv/repo/structure.sql
+
+# The directory Mix downloads your dependencies sources to
+/deps/
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test coverage
+/cover/
+/coverage/
+
+# Logs
+/log/
+*.log 

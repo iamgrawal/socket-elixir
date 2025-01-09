@@ -1,0 +1,53 @@
+# Git
+.git
+.gitignore
+
+# Elixir
+_build/
+cover/
+deps/
+doc/
+.fetch
+erl_crash.dump
+*.ez
+realtime_server-*.tar
+priv/static/
+
+# Environment variables
+.env
+.env.*
+
+# Temporary files
+tmp/
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated
+.DS_Store
+.DS_Store?
+.*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+docs/
+
+# Tests
+test/
+cover/
+
+# Development configuration
+.formatter.exs
+.credo.exs 
