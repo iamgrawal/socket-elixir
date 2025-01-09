@@ -252,3 +252,37 @@ replicas: [
     ]
 ]
 ```
+
+## Monitoring Setup
+
+### Logging Configuration
+
+Configure logging backends:
+
+```elixir
+config :realtime_server,
+  logger_backends: [
+    RealtimeServer.Observability.Loggers.Console,
+    RealtimeServer.Observability.Loggers.Datadog
+  ]
+```
+
+### Metrics Configuration
+
+Set up metrics collection:
+
+```elixir
+config :realtime_server,
+  metrics_backends: [
+    RealtimeServer.Observability.Metrics.Prometheus
+  ]
+```
+
+### Alert Configuration
+
+Configure critical alerts:
+
+- Database connection issues
+- High error rates
+- Performance degradation
+- Resource utilization

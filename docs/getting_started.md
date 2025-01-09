@@ -204,3 +204,45 @@ mix observer
 - Check [Firebase Integration](firebase_integration.md)
 - Explore [API Reference](api_reference.md)
 - Review [Deployment Guide](deployment.md)
+
+## Database Configuration
+
+### Primary Database (Google Cloud SQL)
+
+Configure your primary database connection:
+
+```bash
+PRIMARY_DB_USERNAME=your_primary_username
+PRIMARY_DB_PASSWORD=your_primary_password
+PRIMARY_DB_NAME=your_database_name
+PRIMARY_DB_HOST=your_primary_instance.region.cloudsql.com
+PRIMARY_DB_PORT=3306
+```
+
+### Read Replicas
+
+Configure your read replicas for better performance:
+
+```bash
+# First Replica
+REPLICA_1_DB_USERNAME=your_replica1_username
+REPLICA_1_DB_PASSWORD=your_replica1_password
+REPLICA_1_DB_NAME=your_database_name
+REPLICA_1_DB_HOST=your_replica1_instance.region.cloudsql.com
+REPLICA_1_DB_PORT=3306
+
+# Second Replica
+REPLICA_2_DB_USERNAME=your_replica2_username
+REPLICA_2_DB_PASSWORD=your_replica2_password
+REPLICA_2_DB_NAME=your_database_name
+REPLICA_2_DB_HOST=your_replica2_instance.region.cloudsql.com
+REPLICA_2_DB_PORT=3306
+```
+
+### SSL Configuration
+
+For secure database connections:
+
+```bash
+DB_CA_CERT=/path/to/server-ca.pem
+```

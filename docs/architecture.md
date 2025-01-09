@@ -268,3 +268,27 @@ graph TD
     API1 --> Cache
     API2 --> Cache
 ```
+
+## Database Architecture
+
+### Primary-Replica Setup
+
+```mermaid
+graph TD
+    Client[Application]
+    Primary[(Primary DB)]
+    Replica1[(Read Replica 1)]
+    Replica2[(Read Replica 2)]
+
+    Client -->|Writes| Primary
+    Client -->|Reads| Replica1
+    Client -->|Reads| Replica2
+    Primary -->|Replication| Replica1
+    Primary -->|Replication| Replica2
+```
+
+### Read-Write Split
+
+- Write operations always go to primary
+- Read operations are distributed among replicas
+- Automatic fallback to primary if replicas are unavailable
